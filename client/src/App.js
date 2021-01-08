@@ -1,26 +1,43 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
+
+import Nav from "./components/Nav";
+import Foot from "./components/Foot";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+  
+    state = {
+    events: [],
+    eventsSearch: ""
+  };
+
+  render() {
+    return (
+     
+    <div>
+      <Nav />
+      
+             
     </div>
   );
+  }
 }
-
 export default App;
+
+  // function App() {
+	//   return (
+	// 	  <Router>
+	// 		  <Nav />
+	// 		    <Switch>
+	// 			    <Route exact path="/" component={Home} />
+	// 			    <Route exact path="/search" component={Search} />
+	// 			    <Route exact path="/profile" component={Profile} />
+	// 		    </Switch>
+	// 	  </Router>
+	//   );
+  // }
+
+// export default App;
+
+
