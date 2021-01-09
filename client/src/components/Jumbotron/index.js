@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css"
 
 function Jumbotron() {
   return (
-    <div style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }} className="jumbotron">
+    <div className="header">
         <h1> Date Night </h1>
 				<p>Search for your next date !</p>
     </div>

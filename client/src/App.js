@@ -6,12 +6,14 @@ import Nav from "./components/Nav";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Main from "./components/Main/Main";
+import Foot from "./components/Foot/index";
 
 function App() {
   return (
     <div className="App">
       <Nav />
-	  <Main/>
+      <Foot />
+
       <Router>
         <Switch>
           <Route exact path="/">
