@@ -1,43 +1,41 @@
 import React, { Component } from "react";
-
-import Nav from "./components/Nav";
-import Foot from "./components/Foot";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import Nav from "./components/Nav";
+import Home from "./pages/Home";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends Component {
+// class App extends Component {
   
-    state = {
-    events: [],
-    eventsSearch: ""
-  };
+//     state = {
+//     events: [],
+//     eventsSearch: ""
+//   };
 
-  render() {
-    return (
+//   render() {
+//     return (
      
-    <div>
-      <Nav />
+//     <div>
+//       <Nav />
       
              
-    </div>
-  );
-  }
-}
-export default App;
-
-  // function App() {
-	//   return (
-	// 	  <Router>
-	// 		  <Nav />
-	// 		    <Switch>
-	// 			    <Route exact path="/" component={Home} />
-	// 			    <Route exact path="/search" component={Search} />
-	// 			    <Route exact path="/profile" component={Profile} />
-	// 		    </Switch>
-	// 	  </Router>
-	//   );
-  // }
-
+//     </div>
+//   );
+//   }
+// }
 // export default App;
+
+  function App() {
+	  return (
+		  <Router>
+			    <Switch>
+				      <Route exact path="/" component={Home} />
+				    
+			    </Switch>
+		  </Router>
+	  );
+  }
+
+export default App;
 
 
