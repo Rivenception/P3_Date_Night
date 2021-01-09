@@ -1,0 +1,10 @@
+.jumbotron {
+    background-image: url("erwan-hesry-WPTHZkA-M4I-unsplash (1).jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    padding-top: 10;
+    text-align: center;
+  }
