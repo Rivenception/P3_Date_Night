@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Nav from "../components/Nav";
 
-    class Home extends Component {
+    class Profile extends Component {
     
         state = {
         events: [],
@@ -12,9 +12,9 @@ import Nav from "../components/Nav";
             return (
                 <div>
                     <Nav />
-                    <h2>Home Page</h2>
+                    <h2>Profile Page</h2>
                 </div>
             );
         }
     }
-export default Home;
+export default Profile;
