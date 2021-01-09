@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-    function Foot() {
+    function Footer() {
         return (
             
         <nav className="navbar navbar-expand-lg navbar-primary bg-light" sticky="bottom" >
@@ -13,4 +13,4 @@ import { Link } from "react-router-dom";
   );
 }
 
-export default Foot;
+export default Footer;
