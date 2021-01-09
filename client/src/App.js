@@ -1,23 +1,31 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import Nav from "./components/Nav";
-import Home from "./pages/Home";
-import Profile from "./pages/Profile";
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from "./pages/Home.jsx";
+import Profile from "./pages/Profile.jsx";
+import Nav from "./components/Nav";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Main from "./components/Main/Main";
+import Foot from "./components/Foot/index";
 
+function App() {
+  return (
+    <div className="App">
+      <Nav />
+      <Foot />
 
-  function App() {
-	  return (
-		  <Router>
-			    <Switch>
-				      <Route exact path="/" component={Home} />
-              <Route exact path="/profile" component={Profile} />
-			    </Switch>
-		  </Router>
-	  );
-  }
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+  );
+}
 
 export default App;
-
-
