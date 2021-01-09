@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Nav from "../components/Nav";
-import Jumbotron from "../components/Jumbotron";
+import Jumbotron from "../components/jumbotron-2";
     class Home extends Component {
     
         state = {

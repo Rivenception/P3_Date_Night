@@ -1,6 +1,6 @@
 import React from "react";
  function Figure(){
-
+  return (
  
 <Figure>
   <Figure.Image
@@ -15,6 +15,7 @@ import React from "react";
    Date Night Activites Caption would go here. 
   </Figure.Caption>
 </Figure>
+  )
  }
 
  export default Figure;

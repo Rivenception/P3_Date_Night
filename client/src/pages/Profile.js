@@ -12,7 +12,7 @@ import Nav from "../components/Nav";
             return (
                 <div>
                     <Nav />
-                    <h2>Profile Page</h2>
+                    <h2>Profile Page</h2>                
                 </div>
             );
         }
