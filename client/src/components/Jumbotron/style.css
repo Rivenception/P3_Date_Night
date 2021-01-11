@@ -1,7 +1,15 @@
+@font-face {
+    font-family: 'webfont';
+    src: url('../../assets/Parisienne-Regular.ttf') format("truetype");
+} 
+
 .header {
     height: 300;
     clear: "both";
     text-align: center;
     padding-top: 120;
-    font-family: Snell Roundhand, cursive;
+}
+
+.h1 {
+    font-family: 'webfont';
 }

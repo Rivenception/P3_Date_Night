@@ -17,10 +17,3 @@ function Nav() {
 }
 
 export default Nav;
-
-const styles = {
-  link: {
-    color: "black",
-    padding: "20px",
-  },
-};

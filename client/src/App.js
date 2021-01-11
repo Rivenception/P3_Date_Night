@@ -22,6 +22,15 @@ function App() {
           <Route exact path="/profile">
             <Profile />
           </Route>
+		  <Route exact path="/preferences">
+            <Profile />
+          </Route>
+		  <Route exact path="/planner">
+            <Profile />
+          </Route>
+		  <Route exact path="/gallery">
+            <Profile />
+          </Route>
         </Switch>
       </Router>
     </div>
