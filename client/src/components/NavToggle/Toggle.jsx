@@ -1,3 +1,8 @@
+// Link to sidebar app I tried to emulate for app
+
+// https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/index.html
+// https://startbootstrap.com/previews/simple-sidebar
+
 import React from "react";
 import "./style.css";
 
@@ -23,17 +28,6 @@ function NavToggle() {
           </button>
         </nav>
       </div>
-      <button
-          className="navbar-toggler ml-1"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarToggleExternalContent"
-          aria-controls="navbarToggleExternalContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
     </div>
   );
 }

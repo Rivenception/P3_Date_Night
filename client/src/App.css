@@ -1,16 +1,3 @@
-/* .bg-img {
-  background-image: url("../src/assets/BG.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  background-color: #282c34;
-  position: relative;
-  z-index: -1;
-} */
-
 .App {
   text-align: center;
   position: absolute;

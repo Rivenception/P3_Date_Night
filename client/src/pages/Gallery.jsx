@@ -1,3 +1,6 @@
+// Github repo for potential use
+// https://github.com/xiaolin/react-image-gallery
+
 function Gallery() {
   return (
     <div>
