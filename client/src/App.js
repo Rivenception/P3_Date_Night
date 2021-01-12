@@ -10,6 +10,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Foot from "./components/Foot/index";
 import { Wrapper, Main, Sidebar } from "./components/Wrappers/index";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 
 function App() {
   return (
@@ -27,6 +30,10 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+
           <Route exact path="/profile">
             <Profile />
           </Route>
