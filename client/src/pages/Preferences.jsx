@@ -1,8 +1,11 @@
+import Settings from "../components/Preferences/preferences";
+
 function Preferences() {
   return (
     <div>
       <br />
-      <h2 className="fancy">Preferences</h2>
+      <h2 className="fancy">Settings</h2>
+      <Settings/>
     </div>
   );
 }
