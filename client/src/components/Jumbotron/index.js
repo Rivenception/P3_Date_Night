@@ -4,8 +4,9 @@ import "./style.css"
 function Jumbotron() {
   return (
     <div className="header">
-        <h1> Date Night </h1>
-				<p>Search for your next date !</p>
+        <br/>
+        <h1 className="fancy"> Date Night </h1>
+        <br/>
     </div>
   );
 }

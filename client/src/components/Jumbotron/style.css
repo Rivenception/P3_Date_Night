@@ -1,7 +1,16 @@
+@font-face {
+    font-family: 'webfont';
+    src: url('../../assets/Tomatoes-O8L8.ttf') format("truetype");
+} 
+
 .header {
     height: 300;
     clear: "both";
     text-align: center;
     padding-top: 120;
-    font-family: Snell Roundhand, cursive;
+}
+
+.fancy {
+    font-family: 'webfont';
+    color: whitesmoke;
 }
