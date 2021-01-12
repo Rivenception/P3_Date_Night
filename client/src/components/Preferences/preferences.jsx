@@ -1,3 +1,5 @@
+// Link to preferences exmaple we modified https://www.bootdey.com/snippets/view/bs4-profile-settings-page
+
 import "./style.css";
 import Budget from "./budget";
 

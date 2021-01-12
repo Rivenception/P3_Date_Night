@@ -1,4 +1,5 @@
 import "./style.css";
+import Checkbox from "./checkbox";
 
 function Budget() {
   return (
@@ -7,39 +8,9 @@ function Budget() {
       <h2 className="fancy">Budget</h2>
       <hr className="mt-2 mb-3 separator" />
       <div className="d-flex flex-wrap justify-content-between align-items-center">
-        <div className="custom-control custom-checkbox d-block">
-          <input
-            className="custom-control-input"
-            type="checkbox"
-            id="subscribe_me"
-            checked=""
-          />
-          <label className="custom-control-label" htmlFor="subscribe_me">
-            Low
-          </label>
-        </div>
-        <div className="custom-control custom-checkbox d-block">
-          <input
-            className="custom-control-input"
-            type="checkbox"
-            id="subscribe_me"
-            checked=""
-          />
-          <label className="custom-control-label" htmlFor="subscribe_me">
-            Medium
-          </label>
-        </div>
-        <div className="custom-control custom-checkbox d-block">
-          <input
-            className="custom-control-input"
-            type="checkbox"
-            id="subscribe_me"
-            checked=""
-          />
-          <label className="custom-control-label" htmlFor="subscribe_me">
-            High
-          </label>
-        </div>
+        <Checkbox innerHTML={"Low"}/>
+        <Checkbox innerHTML={"Medium"}/>
+        <Checkbox innerHTML={"High"}/>
       </div>
     </div>
   );
