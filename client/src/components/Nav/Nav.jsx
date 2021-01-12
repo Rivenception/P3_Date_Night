@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container-fluid">
-        <NavSidebar />
+        {/* <NavSidebar /> */}
         <a className="navbar-brand fancy" href="/">
           Date Night
         </a>

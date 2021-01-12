@@ -1,6 +1,8 @@
+import NavSidebar from "../Nav/NavSidebar";
+
 export function Wrapper() {
   return (
-    <div className="wrapper">
+    <div className="d-flex" id="wrapper">
     </div>
   );
 }
@@ -15,6 +17,7 @@ export function Main() {
 export function Sidebar() {
   return (
     <div className="sidebar-wrapper">
+      <NavSidebar/>
     </div>
   );
 }

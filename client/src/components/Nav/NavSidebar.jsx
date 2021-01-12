@@ -2,23 +2,23 @@ import React from "react";
 import "./style.css";
 
 function NavSidebar() {
+
   return (
     <div class="collapse" id="navbarToggleExternalContent">
-      <div class="sidebar-heading fancy">Date Night </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-dark">
+        <a href="/" class="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Home
         </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">
+        <a href="/planner" class="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Planner
         </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">
+        <a href="/profile" class="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Adventures
         </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">
+        <a href="/gallery" class="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Gallery
         </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">
+        <a href="/preferences" class="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Preferences
         </a>
       </div>

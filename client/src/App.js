@@ -10,18 +10,15 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Foot from "./components/Foot/index";
 import { Wrapper, Main, Sidebar } from "./components/Wrappers/index";
+import NavSidebar from "./components/Nav/NavSidebar"
 
 function App() {
   return (
     <div className="App">
-      {/* <Wrapper>
-        <Sidebar></Sidebar>
-        <Main> */}
-          <Nav />
-          <Foot />
-        {/* </Main>
-      </Wrapper> */}
-
+      <Wrapper/>
+	  <Sidebar/>
+	  <Main/>
+      <Nav />
       <Router>
         <Switch>
           <Route exact path="/">
@@ -41,6 +38,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <Foot />
     </div>
   );
 }
