@@ -4,7 +4,7 @@ function Home() {
   return (
     <div>
       <Jumbotron />
-      <h2>Home Page</h2>
+      <h2 className="fancy">Home Page</h2>
     </div>
   );
 }

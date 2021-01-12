@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'webfont';
-    src: url('../../assets/Parisienne-Regular.ttf') format("truetype");
+    src: url('../../assets/Tomatoes-O8L8.ttf') format("truetype");
 } 
 
 .header {
@@ -10,6 +10,7 @@
     padding-top: 120;
 }
 
-.h1 {
+.fancy {
     font-family: 'webfont';
+    color: whitesmoke;
 }

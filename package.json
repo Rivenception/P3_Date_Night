@@ -25,6 +25,7 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "react-bootstrap": "^1.4.0"
+    "react-bootstrap": "^1.4.0",
+    "startbootstrap-simple-sidebar": "^5.1.3"
   }
 }

@@ -1,13 +1,21 @@
 import React from "react";
+import Login from "../Buttons/login";
+import Signup from "../Buttons/signup";
+import NavSidebar from "./NavSidebar";
+import "./style.css";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container-fluid">
-        <button className="btn btn-outline-light" type="submit">Sign Up</button>
-        <button className="btn btn-outline-light" type="submit">Login</button>
+        <NavSidebar />
+        <a className="navbar-brand fancy" href="/">
+          Date Night
+        </a>
+        <Signup />
+        <Login />
         <button
-          className="navbar-toggler ml-auto"
+          className="navbar-toggler ml-1"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarToggleExternalContent"

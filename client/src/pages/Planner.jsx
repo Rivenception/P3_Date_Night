@@ -1,9 +1,9 @@
 function Planner() {
-    return (
-      <div>
-        <h2>Planner</h2>
-      </div>
-    );
-  }
-  export default Planner;
-  
+  return (
+    <div>
+      <br />
+      <h2 className="fancy">Planner</h2>
+    </div>
+  );
+}
+export default Planner;
