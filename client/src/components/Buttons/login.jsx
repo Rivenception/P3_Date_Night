@@ -1,15 +1,17 @@
+import React from 'react'
 import {Link, BrowserRouter as Router} from 'react-router-dom';
 
-function Login() {
+function LoginBtn() {
   return (
     <Router>
-
-      <Link to="/login"><button className="btn btn-outline-light ml-1" type="submit">
-        Login
-      </button></Link>
+      <div className="w3-top zeed">
+      <Link to="/login"><a href="#login" className="btn btn-outline-light ml-1">Login</a>
+      </Link>
+      </div>
     </Router>
+    
 
   );
 }
 
-export default Login;
+export default LoginBtn;
