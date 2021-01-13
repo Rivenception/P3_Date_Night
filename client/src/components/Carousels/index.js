@@ -1,34 +1,35 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
-import image from "../../assets/images/image1.jpg"
-import image2 from "../../assets/images/image2.jpg"
-import image3 from "../../assets/images/image3.jpg"
+import image from "../../assets/images/Stargazing.jpg"
+import image2 from "../../assets/images/Hiking.jpg"
+import image3 from "../../assets/images/Ski Trip.jpg"
+import image4 from "../../assets/images/Beach.jpg"
 
 
-function Carousels(){
+
+function Carousels() {
     return (
         <Carousel>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={image}
+                    src={image2}
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Hiking Expedition</h3>
+                    <p>Create new memories in the great outdoors.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={image2}
+                    src={image4}
                     alt="Second slide"
                 />
-
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Beach Trip</h3>
+                    <p>Enjoy a beach trip you'll never forget.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -39,8 +40,19 @@ function Carousels(){
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h3>Ski Trip</h3>
+                    <p>Enjoy the view from the slopes, and shred some powder.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={image}
+                    alt="Fourth slide"
+                />
+                <Carousel.Caption>
+                <h3>Stargazing</h3>
+                    <p>Take out your telescope and do a night of staring at the stars.</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
