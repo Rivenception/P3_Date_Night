@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'webfont';
+    src: url('../../assets/Tomatoes-O8L8.ttf') format("truetype");
+} 
+
+
 #footer {
     width: 100%;
     height: 50px;  
@@ -7,3 +13,8 @@
     justify-content: center;
     
  }
+
+ .fancy {
+    font-family: 'webfont';
+    color: whitesmoke;
+}
