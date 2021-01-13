@@ -8,6 +8,7 @@ function Gallery() {
       <h2 className="fancy">Gallery</h2>
       <br></br>
       <Carousels/>
+      <br></br>
     </div>
   );
 }

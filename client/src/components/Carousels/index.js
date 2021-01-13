@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 import Carousel from 'react-bootstrap/Carousel'
 import image from "../../assets/images/Stargazing.jpg"
 import image2 from "../../assets/images/Hiking.jpg"
@@ -12,7 +13,7 @@ function Carousels() {
         <Carousel>
             <Carousel.Item>
                 <img
-                    className="d-block w-100"
+                    className="fancy d-block w-100"
                     src={image2}
                     alt="First slide"
                 />
@@ -56,6 +57,7 @@ function Carousels() {
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
+       
     )
 }
 
