@@ -1,0 +1,10 @@
+{
+    "use_env_constiable": "DATABASE_URL",
+    "production": {
+        "username": "test_user",
+        "password": "password",
+        "database": "datenightdb",
+        "dialect": "sqlite",
+        "storage": "datenightdb.sqlite"
+      }
+}
