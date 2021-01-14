@@ -1,9 +1,11 @@
-function Login() {
+import React from 'react';
+
+function LoginBtn() {
   return (
-    <button className="btn btn-outline-light ml-1" type="submit">
+    <a href="login" className="btn btn-outline-light ml-1" type="submit">
       Login
-    </button>
+    </a>
   );
 }
 
-export default Login;
+export default LoginBtn;
