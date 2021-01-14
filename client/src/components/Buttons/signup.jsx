@@ -1,9 +1,9 @@
-function Signup() {
+function SignupBtn() {
   return (
-    <button className="btn btn-outline-light ml-auto" type="submit">
-      Sign Up
-    </button>
+    <a href="signup" className="btn btn-outline-light ml-auto" type="submit">
+      Signup
+    </a>
   );
 }
 
-export default Signup;
+export default SignupBtn;

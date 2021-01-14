@@ -1,5 +1,5 @@
 import React from "react";
-import Login from "../Buttons/login";
+import LoginBtn from "../Buttons/login";
 import Signup from "../Buttons/signup";
 import NavSidebar from "./NavSidebar";
 import "./style.css";
@@ -13,7 +13,7 @@ function Navbar() {
           Date Night
         </a>
         <Signup />
-        <Login />
+        <LoginBtn />
         <button
           className="navbar-toggler ml-1"
           type="button"
