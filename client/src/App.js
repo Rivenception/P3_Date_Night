@@ -10,7 +10,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Foot from "./components/Foot/index";
 import { Wrapper, Main, Sidebar } from "./components/Wrappers/index";
-import NavSidebar from "./components/Nav/NavSidebar"
+import NavSidebar from "./components/Nav/NavSidebar";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
           </Route>
           <Route exact path="/profile">
             <Profile />
