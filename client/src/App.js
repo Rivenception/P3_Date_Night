@@ -10,7 +10,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Foot from "./components/Foot/index";
 import { Wrapper, Main, Sidebar } from "./components/Wrappers/index";
-import NavSidebar from "./components/Nav/NavSidebar";
+//import NavSidebar from "./components/Nav/NavSidebar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
