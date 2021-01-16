@@ -13,9 +13,9 @@ function Carousels() {
         <Carousel>
             <Carousel.Item>
                 <img
-                    className="fancy d-block w-100"
+                    className=" d-block w-100 "
                     src={image2}
-                    alt="First slide"
+                    alt="First slide "
                 />
                 <Carousel.Caption>
                     <h3>Hiking Expedition</h3>
