@@ -7,3 +7,11 @@
     justify-content: center;
     
  }
+
+ .carousel {
+    width:640px;
+    height:360px;
+    margin-left:400px;
+  }
+
+  
