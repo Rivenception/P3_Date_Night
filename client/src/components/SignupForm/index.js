@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./style.css";
-
+import API from '../../utils/API'
 class Form extends Component {
   
   state = {
     email: "",
-    userName: "",
+    username: "",
     password: ""
   };
 
@@ -26,19 +26,20 @@ class Form extends Component {
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.email || !this.state.userName) {
+    if (!this.state.email || !this.state.username) {
       alert("Select email and username please!");
     } else if (this.state.password.length < 4) {
       alert(
-        `Choose a more secure password ${this.state.userName}`
+        `Choose a more secure password ${this.state.username}`
       );
     } else {
-      alert(`Hello ${this.state.userName}`);
+      // alert(`Hello ${this.state.username}`);
+      API.registerUser(this.state)
     }
 
     this.setState({
       email: "",
-      userName: "",
+      username: "",
       password: ""
     });
   };
@@ -52,7 +53,7 @@ class Form extends Component {
           <br/>
           Welcome
           <br/>
-          {this.state.userName}
+          {this.state.username}
         </p>
         
         <h3 className="fancy"> Please Signup </h3>
@@ -65,8 +66,8 @@ class Form extends Component {
             placeholder="Email"
           />
           <input
-            value={this.state.userName}
-            name="userName"
+            value={this.state.username}
+            name="username"
             onChange={this.handleInputChange}
             type="text"
             placeholder="Username"

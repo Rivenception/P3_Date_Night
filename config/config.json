@@ -1,10 +1,30 @@
+
 {
-    "use_env_constiable": "DATABASE_URL",
-    "production": {
-        "username": "test_user",
-        "password": "password",
-        "database": "datenightdb",
-        "dialect": "sqlite",
-        "storage": "datenightdb.sqlite"
-      }
+  "development": {
+    "username": "root",
+    "password": "b3z0s31@",
+    "database": "usersdb",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql"
+   
+  },
+  "test": {
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
+    "port": 3306,
+    "dialect": ""
+    
+  },
+  "production": {
+   "username": "root",
+    "password": "b3z0s31@",
+    "database": "usersdb",
+    "host": "localhost",
+    "port": 3306,
+    "dialect": "mysql"
+
+  }
 }

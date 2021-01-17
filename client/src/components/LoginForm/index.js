@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { BrowserRouter as Redirect } from "react-router-dom";
 import "./style.css";
 
 class Form extends Component {
   
   state = {
     email: "",
-    userName: "",
+    username: "",
     password: ""
   };
 
@@ -23,23 +24,27 @@ class Form extends Component {
     });
   };
 
-  handleFormSubmit = event => {
+  handleLogin = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-    if (!this.state.email || !this.state.userName) {
+    
+
+    if (!this.state.email || !this.state.username) {
       alert("Fill out your email and username please!");
     } else if (this.state.password.length < 4) {
       alert(
-        `Choose a more secure password ${this.state.userName}`
+        `Choose a more secure password ${this.state.username}`
       );
     } else {
-      alert(`Hello ${this.state.userName}`);
+      alert(`Hello ${this.state.username}`);
+      <Redirect to="/profile" />
     }
 
     this.setState({
       email: "",
       userName: "",
-      password: ""
+      password: "",
+      loggedIn: true
     });
   };
 
@@ -52,7 +57,7 @@ class Form extends Component {
         <p className="fancy">
           Welcome 
           <br/>
-          {this.state.userName}
+          {this.state.username}
         </p>
 
         <h3 className="fancy"> Please Login </h3>
@@ -66,8 +71,8 @@ class Form extends Component {
             placeholder="Email"
           />
           <input
-            value={this.state.userName}
-            name="userName"
+            value={this.state.username}
+            name="username"
             onChange={this.handleInputChange}
             type="text"
             placeholder="Username"
@@ -80,7 +85,7 @@ class Form extends Component {
             placeholder="Password"
           />
           <br></br>
-          <button className="btn btn-outline-light bg-dark" onClick={this.handleFormSubmit}>Enter</button>
+          <button className="btn btn-outline-light bg-dark" onClick={this.handleLogin}>Enter</button>
         </form>
       </div>
     );

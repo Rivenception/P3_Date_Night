@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, {Component} from "react";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Profile from "./pages/Profile.jsx";
 import Preferences from "./pages/Preferences";
@@ -14,13 +14,46 @@ import NavSidebar from "./components/Nav/NavSidebar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
-function App() {
+  const ProtectedRoute = ({ component: Comp, loggedIn, path, ...rest }) => {
+    return (
+      <Route
+        path={path}
+        {...rest}
+        render={props => {
+          return loggedIn ? (
+            <Comp {...props} />
+          ) : (
+            <Redirect
+              to={{
+                pathname: "/login",
+                state: {
+                  prevLocation: path,
+                  error: "You need to login first!",
+                },
+              }}
+            />
+          );
+        }}
+      />
+    );
+  };
+
+class App extends Component {
+    state = {
+      loggedIn: false,
+    };
+    
+    render() {
+     
   return (
+    
     <div className="App">
       <Wrapper/>
 	  <Sidebar/>
 	  <Main/>
       <Nav />
+      <div className="tabs">
+         
       <Router>
         <Switch>
           <Route exact path="/">
@@ -32,23 +65,22 @@ function App() {
           <Route exact path="/signup">
             <Signup />
           </Route>
-          <Route exact path="/profile">
-            <Profile />
-          </Route>
-          <Route exact path="/preferences">
-            <Preferences />
-          </Route>
-          <Route exact path="/planner">
-            <Planner />
-          </Route>
+          
+          <ProtectedRoute exact path="/profile" loggedIn={this.state.loggedIn} component={Profile} />
+          <ProtectedRoute exact path="/preferences" loggedIn={this.state.loggedIn} component={Preferences} />
+          <ProtectedRoute exact path="/planner" loggedIn={this.state.loggedIn} component={Planner} />
+
+        
           <Route exact path="/gallery">
             <Gallery />
           </Route>
         </Switch>
       </Router>
+      </div>
       <Foot />
     </div>
   );
+    }
 }
 
 export default App;

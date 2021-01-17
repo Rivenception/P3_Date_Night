@@ -5,7 +5,7 @@ import "./style.css";
         return (
             
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark " id="footer">
-            <h1 className="navbar-brand" href="/">Date Night  </h1>
+            <h1 className="navbar-brand" href="/">Date Night &copy; </h1>
         </nav>
         
   );

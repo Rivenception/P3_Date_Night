@@ -1,8 +1,10 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const routes = require("./routes");
+const routes = require("./routes/user-api");
 const csv = require('csvtojson');
 const db = require("./models");
+
+var session = require("express-session");
+var passport = require("./config/passport");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -11,6 +13,11 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
@@ -20,12 +27,20 @@ app.use(routes);
 app.use(require("./routes/index.js"));
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datenightdb");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datenightdb");
 
 // Start the API server
-app.listen(PORT, function () {
-	console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+db.sequelize.sync().then(function(){
+
+  app.listen(PORT, function() {
+    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  });
 });
+
+
+
+
+
 
 const dbcsv = `Index,Location,Date,Instructions,Budget,Suggested Items,Links
 1,Home,"Make Dessert, with a twist!",Blindfold your significant other and be their eyes. Build trust in this quirky cooking experiment. Choose yours and your partners favorite dessert and enjoy laughs as you help your partner make a delicious treat while igniting some romantic flames. Pair with wine and enjoy. Take photos and post to your memory!,Low,,
