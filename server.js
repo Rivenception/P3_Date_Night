@@ -1,5 +1,5 @@
 const express = require("express");
-const routes = require("./routes/user-api");
+const routes = require("./routes");
 const csv = require('csvtojson');
 const db = require("./models");
 
@@ -24,7 +24,8 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
-app.use(require("./routes/index.js"));
+// app.use(require("./routes/user-api"));
+
 
 // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datenightdb");

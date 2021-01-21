@@ -10,12 +10,12 @@
    
   },
   "test": {
-    "username": "",
-    "password": "",
-    "database": "",
-    "host": "",
+    "username": "root",
+    "password": "b3z0s31@",
+    "database": "usersdb",
+    "host": "localhost",
     "port": 3306,
-    "dialect": ""
+    "dialect": "mysql"
     
   },
   "production": {

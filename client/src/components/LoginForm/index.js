@@ -44,7 +44,7 @@ class Form extends Component {
       email: "",
       userName: "",
       password: "",
-      loggedIn: true
+      // loggedIn: true
     });
   };
 

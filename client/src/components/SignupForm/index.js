@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import API from '../../utils/API'
+// import { Redirect } from 'react-router-dom'
 class Form extends Component {
   
   state = {
@@ -35,6 +36,9 @@ class Form extends Component {
     } else {
       // alert(`Hello ${this.state.username}`);
       API.registerUser(this.state)
+      .then(res => console.log(res))
+      console.log('sent', this.state)
+      // return(<Redirect to="/" />)
     }
 
     this.setState({
