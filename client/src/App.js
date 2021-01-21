@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { getPosts } from "./utils/api";
+import { getDates } from "./utils/api";
 import Home from "./pages/Home.jsx";
 import Blog from "./pages/Blog.jsx";
 import Preferences from "./pages/Preferences";
@@ -15,19 +15,18 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [dates, setDates] = useState([]);
 
   useEffect(
     () => {
-        getPosts()
+        getDates()
         .then(res => {
           console.log(res.data)
-          setPosts(res.data)
+          setDates(res.data)
         }
         )
         .catch(err => console.log(err));
     }, [])
-
 
   return (
     <div className="App">

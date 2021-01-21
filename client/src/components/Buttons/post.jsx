@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 
-function Post() {
+function Post(props) {
+
   return (
-    <button className="btn btn-secondary ml-1" type="submit" id="postSubmit">
+    <button className="btn btn-secondary ml-1" type="submit" id="postSubmit" onClick={props.handleBlogSubmit}>
       Post Entry
     </button>
   );

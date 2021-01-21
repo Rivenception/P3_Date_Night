@@ -2,15 +2,15 @@ module.exports = function (sequelize, DataTypes) {
   const Blog = sequelize.define("Blog",
     {
       user: {
-        allowNull: false,
+        // allowNull: false,
         type: DataTypes.STRING
       },
       date: {
-        allowNull: false,
+        // allowNull: false,
         type: DataTypes.STRING,
       },
       blog: {
-        allowNull: false,
+        // allowNull: false,
         type: DataTypes.STRING(5000),
       },
     },

@@ -6,5 +6,21 @@
         "database": "datenightdb",
         "dialect": "sqlite",
         "storage": "datenightdb.sqlite"
+      },
+      "development": {
+        "username": "root",
+        "password": "password",
+        "database": "datenightdb",
+        "host": "localhost",
+        "port": 3306,
+        "dialect": "mysql"
+      },
+      "test": {
+        "username": "root",
+        "password": "password",
+        "database": "datenightdb",
+        "port": 3306,
+        "host": "127.0.0.1",
+        "dialect": "mysql"
       }
 }
