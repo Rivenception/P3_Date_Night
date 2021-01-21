@@ -1,14 +1,12 @@
 import React from "react";
 import LoginBtn from "../Buttons/login";
 import Signup from "../Buttons/signup";
-import NavSidebar from "./NavSidebar";
 import "./style.css";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-dark bg-dark">
       <div className="container-fluid">
-        {/* <NavSidebar /> */}
         <a className="navbar-brand fancy" href="/">
           Date Night
         </a>

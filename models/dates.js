@@ -4,6 +4,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       type: DataTypes.STRING
     },
+    date: {
+      allowNull: false,
+      type: DataTypes.STRING
+    },
     instructions: {
       allowNull: false,
       type: DataTypes.STRING(5000)
