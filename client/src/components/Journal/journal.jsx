@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-// import blog from "../../../../models/blog";
 import Post from "../Buttons/post";
 import "./style.css";
 import { postBlogs, getBlogs } from "../../utils/api";
+import Entry from "./entry";
 
 function Journal() {
   const [posts, setPosts] = useState([]);
@@ -38,18 +38,19 @@ function Journal() {
       blog: entry,
     };
     console.log(data);
+    
+    //posting input data from user
     postBlogs(data)
       .then((data) => console.log(data))
       .catch((err) => console.log(err));
-    // fetch("api/blogs", {
-    //   method: "POST",
-    //   mode: "no-cors",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(data),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => console.log(data))
-    //   .catch((err) => console.log(err));
+
+    //after post new blog entry we are getting all blog posts and mapping to our Entry component
+    getBlogs()
+    .then((res) => {
+    console.log(res.data);
+    setPosts(res.data);
+    })
+    .catch((err) => console.log(err));
   };
 
   return (
@@ -69,6 +70,14 @@ function Journal() {
         />
       </div>
       <Post handleBlogSubmit={handleBlogSubmit} />
+      <br/>
+      <br/>
+      {posts.map(post => (
+      <Entry
+      date={post.date}
+      blog={post.blog}
+      />
+      ))}
     </div>
   );
 }
