@@ -20,6 +20,9 @@ module.exports = function(sequelize, DataTypes) {
     },
     links: {
       type: DataTypes.STRING,
+    },
+    photo: {
+      type: DataTypes.STRING,
     }
   },
   {

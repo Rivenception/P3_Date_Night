@@ -28,7 +28,7 @@ function Datecard(props) {
   return (
     <div className="container col-md-12 col-lg-3">
       <div className="card mx-auto" style={{ width: "18rem" }}>
-        <img src={props.screenshot} className="card-img-top" alt="..." />
+        <img src={props.photo} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{props.date}</h5>
           <p className="card-text">{props.instructions}</p>

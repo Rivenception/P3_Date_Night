@@ -62,6 +62,7 @@ function App() {
                 <Datecard
                   key = {datelist.id}
                   id = {datelist.id}
+                  photo = {datelist.photo}
                   date = {datelist.date}
                   instructions = {datelist.instructions}
                   location = {datelist.location}
