@@ -13,6 +13,8 @@ import Foot from "./components/Foot/index";
 import { Wrapper, Main, Sidebar } from "./components/Wrappers/index";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Datecard from "./components/Cards/datecard";
+import { Row } from 'react-bootstrap';
 
 function App() {
   const [dates, setDates] = useState([]);
@@ -27,6 +29,8 @@ function App() {
         )
         .catch(err => console.log(err));
     }, [])
+
+    console.log(dates)
 
   return (
     <div className="App">
@@ -52,7 +56,23 @@ function App() {
             <Preferences />
           </Route>
           <Route exact path="/planner">
-            <Planner />
+            <Planner>
+              <Row>
+              {dates.map(datelist => (
+                <Datecard
+                  key = {datelist.id}
+                  id = {datelist.id}
+                  date = {datelist.date}
+                  instructions = {datelist.instructions}
+                  location = {datelist.location}
+                  budget = {datelist.budget}
+                  items = {datelist.items}
+                  links = {datelist.links}
+
+                />
+              ))}
+              </Row>
+            </Planner>
           </Route>
           <Route exact path="/gallery">
             <Gallery />
