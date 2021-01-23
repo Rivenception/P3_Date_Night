@@ -57,6 +57,7 @@ function App() {
           </Route>
           <Route exact path="/planner">
             <Planner>
+              <Row>
               {dates.map(datelist => (
                 <Datecard
                   key = {datelist.id}
@@ -71,6 +72,7 @@ function App() {
 
                 />
               ))}
+              </Row>
             </Planner>
           </Route>
           <Route exact path="/gallery">
