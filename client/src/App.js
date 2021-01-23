@@ -14,31 +14,29 @@ import { Wrapper, Main, Sidebar } from "./components/Wrappers/index";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Datecard from "./components/Cards/datecard";
-import { Row } from 'react-bootstrap';
+import { Row } from "react-bootstrap";
 
 function App() {
   const [dates, setDates] = useState([]);
 
-  useEffect(
-    () => {
-        getDates()
-        .then(res => {
-          console.log(res.data)
-          setDates(res.data)
-        }
-        )
-        .catch(err => console.log(err));
-    }, [])
+  useEffect(() => {
+    getDates()
+      .then((res) => {
+        console.log(res.data);
+        setDates(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
-    console.log(dates)
+  console.log(dates);
 
   return (
-    <div className="App">
-    <Wrapper/>
-	  <Sidebar/>
-	  <Main/>
-      <Nav />
-      <Router>
+    <Router>
+      <div className="App">
+        <Wrapper />
+        <Sidebar />
+        <Main />
+        <Nav />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -53,21 +51,21 @@ function App() {
             <Blog />
           </Route>
           <Route exact path="/preferences">
-            <Preferences/>
+            <Preferences />
           </Route>
           <Route exact path="/planner">
             <Planner>
-              {dates.map(datelist => (
+              {dates.map((datelist) => (
                 <Datecard
-                  key = {datelist.id}
-                  id = {datelist.id}
-                  photo = {datelist.photo}
-                  date = {datelist.date}
-                  instructions = {datelist.instructions}
-                  location = {datelist.location}
-                  budget = {datelist.budget}
-                  items = {datelist.items}
-                  links = {datelist.links}
+                  key={datelist.id}
+                  id={datelist.id}
+                  photo={datelist.photo}
+                  date={datelist.date}
+                  instructions={datelist.instructions}
+                  location={datelist.location}
+                  budget={datelist.budget}
+                  items={datelist.items}
+                  links={datelist.links}
                 />
               ))}
             </Planner>
@@ -76,9 +74,9 @@ function App() {
             <Gallery />
           </Route>
         </Switch>
-      </Router>
-      <Foot />
-    </div>
+        <Foot />
+      </div>
+    </Router>
   );
 }
 
