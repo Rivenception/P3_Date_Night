@@ -1,5 +1,5 @@
 const path = require("path");
-const db = require('../models');
+const db = require("../models");
 const router = require("express").Router();
 const Dates = require("../models/dates.js");
 
@@ -11,20 +11,46 @@ const Dates = require("../models/dates.js");
 //   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 // });
 
-// router.get("/api/datelist", (req, res) => {
-//   Dates.find({})
-//     .then(dbDate => {
-//       res.json(dbDate);
-//     })
-//     .catch(err => {
-//       res.status(404).json(err);
-//     });
-// });
-
 router.get("/api/randomdate", async (req, res) => {
   const dates = await db.Date.findAll();
-  const randIdx = Math.floor(Math.random() * dates.length);
-  res.json(dates[randIdx]);
-})
+
+  // randomly shuffles date array from API
+  let shuffledDates = dates
+    .map((a) => ({sort: Math.random(), value: a}))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value)
+
+  // returns first 3 date options
+  res.json(shuffledDates.slice(0, 3))
+
+  // const randIdx = Math.floor(Math.random() * dates.length);
+  // res.json(dates[randIdx]);
+});
+
+router.get("/api/blogs", (req, res) => {
+  db.Blog.findAll()
+    .then((dbBlog) => {
+      res.json(dbBlog);
+    })
+    .catch((err) => {
+      res.status(404).json(err);
+    });
+});
+
+router.post("/api/blogs", function (req, res) {
+  db.Blog.create(req.body).then(function (dbBlog) {
+    res.json(dbBlog);
+  });
+});
+
+router.get("/api/users", (req, res) => {
+  db.User.findAll()
+    .then((dbUser) => {
+      res.json(dbUser);
+    })
+    .catch((err) => {
+      res.status(404).json(err);
+    });
+});
 
 module.exports = router;

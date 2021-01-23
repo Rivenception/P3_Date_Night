@@ -1,11 +1,9 @@
-import Datecard from "../components/Cards/datecard"
-
-function Planner() {
+function Planner({ children }) {
   return (
     <div>
       <br />
       <h2 className="fancy">Planner</h2>
-      <Datecard/>
+      <div className="row">{children}</div>
     </div>
   );
 }

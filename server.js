@@ -1,8 +1,8 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const routes = require("./routes");
 const csv = require('csvtojson');
 const db = require("./models");
+var fs = require("fs");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -18,9 +18,6 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 app.use(require("./routes/index.js"));
-
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datenightdb");
 
 // Start the API server
 app.listen(PORT, function () {
@@ -61,18 +58,27 @@ const dbcsv = `Index,Location,Date,Instructions,Budget,Suggested Items,Links
 31,Outdoors,Play some yard games,"Lawn games aren't just for college kids. Grab a cooler and hang out in the yard playing your favorite games. Some of the classics are Bocci, KanJam, Polish Horseshoes, Ladderball, Cornhole.",Medium,,https://www.amazon.com/s?k=yard+games&ref=nb_sb_noss_1
 `;
 
-db.sequelize.sync({ force: true }).then(() => {
-	csv().fromString(dbcsv).then(arr => {
-		arr.forEach(el => {
-			const rowObject = {
-				location: el.Location,
-				date: el.Date,
-				instructions: el.Instructions,
-				budget: el.Budget,
-				items: el["Suggested Items"],
-				links: el.Links
-			};
-			db.Date.create(rowObject);
-		})
+// added code to read db from assets file rather than hard coding the CSV.
+fs.readFile(__dirname + "/assets/datenightdb.csv", "utf8", function(error, data) {
+	if (error) {
+	  return console.log(error);
+	}
+	const readCSV = data;
+
+	db.sequelize.sync({ force: true }).then(() => {
+		csv().fromString(readCSV).then(arr => {
+			arr.forEach(el => {
+				const rowObject = {
+					location: el.Location,
+					photo: el["Photo Link"],
+					date: el.Date,
+					instructions: el.Instructions,
+					budget: el.Budget,
+					items: el["Suggested Items"],
+					links: el["Affiliate Links"]
+				};
+				db.Date.create(rowObject);
+			})
+		});
 	});
 });

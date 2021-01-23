@@ -4,6 +4,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       type: DataTypes.STRING
     },
+    date: {
+      allowNull: false,
+      type: DataTypes.STRING
+    },
     instructions: {
       allowNull: false,
       type: DataTypes.STRING(5000)
@@ -15,6 +19,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
     },
     links: {
+      type: DataTypes.STRING,
+    },
+    photo: {
       type: DataTypes.STRING,
     }
   },

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { getDates } from "./utils/api";
 import Home from "./pages/Home.jsx";
-import Profile from "./pages/Profile.jsx";
+import Blog from "./pages/Blog.jsx";
 import Preferences from "./pages/Preferences";
 import Planner from "./pages/Planner";
 import Gallery from "./pages/Gallery";
@@ -10,14 +11,30 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Foot from "./components/Foot/index";
 import { Wrapper, Main, Sidebar } from "./components/Wrappers/index";
-import NavSidebar from "./components/Nav/NavSidebar";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Datecard from "./components/Cards/datecard";
+import { Row } from 'react-bootstrap';
 
 function App() {
+  const [dates, setDates] = useState([]);
+
+  useEffect(
+    () => {
+        getDates()
+        .then(res => {
+          console.log(res.data)
+          setDates(res.data)
+        }
+        )
+        .catch(err => console.log(err));
+    }, [])
+
+    console.log(dates)
+
   return (
     <div className="App">
-      <Wrapper/>
+    <Wrapper/>
 	  <Sidebar/>
 	  <Main/>
       <Nav />
@@ -32,14 +49,31 @@ function App() {
           <Route exact path="/signup">
             <Signup />
           </Route>
-          <Route exact path="/profile">
-            <Profile />
+          <Route exact path="/blog">
+            <Blog />
           </Route>
           <Route exact path="/preferences">
             <Preferences />
           </Route>
           <Route exact path="/planner">
-            <Planner />
+            <Planner>
+              <Row>
+              {dates.map(datelist => (
+                <Datecard
+                  key = {datelist.id}
+                  id = {datelist.id}
+                  photo = {datelist.photo}
+                  date = {datelist.date}
+                  instructions = {datelist.instructions}
+                  location = {datelist.location}
+                  budget = {datelist.budget}
+                  items = {datelist.items}
+                  links = {datelist.links}
+
+                />
+              ))}
+              </Row>
+            </Planner>
           </Route>
           <Route exact path="/gallery">
             <Gallery />
