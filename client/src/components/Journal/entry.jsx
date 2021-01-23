@@ -10,7 +10,7 @@ function Entry(props) {
 
 
   return (
-    <div className="card mx-auto">
+    <div >
         <p className="blog">{props.date}</p>
         <p className="fancy blog">{props.blog}</p>
         {/* <button className="btn btn-info" id={props.id}> delete </button> */}

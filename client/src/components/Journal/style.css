@@ -15,10 +15,7 @@ color: whitesmoke;
 }
 
 .blog {
-  /* color: whitesmoke; */
+  color: whitesmoke;
   font-size: x-large;
 }
 
-.card {
-  background-color: lightcoral;
-}
