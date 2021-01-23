@@ -57,4 +57,15 @@ router.get("/api/users", (req, res) => {
     });
 });
 
+  // DELETE route for deleting recipes where the id is equal to req.params.id,
+  // app.delete("/api/blog/:id", function(req, res) {
+  //   db.Blog.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(result) {
+  //     res.json(result);
+  //   });
+  // });
+
 module.exports = router;

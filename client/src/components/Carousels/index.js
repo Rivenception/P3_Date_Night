@@ -2,10 +2,10 @@ import React from "react";
 import "./style.css"
 import Carousel from 'react-bootstrap/Carousel'
 import image from "../../assets/images/Stargazing.jpg"
-import image2 from "../../assets/images/Hiking.jpg"
+// import image2 from "../../assets/images/Hiking.jpg"
 import image3 from "../../assets/images/Ski Trip.jpg"
 import image4 from "../../assets/images/Beach.jpg"
-import { PromiseProvider } from "mongoose";
+// import { PromiseProvider } from "mongoose";
 
 
 
