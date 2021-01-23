@@ -2,11 +2,20 @@ const express = require("express");
 const routes = require("./routes");
 const csv = require('csvtojson');
 const db = require("./models");
+
+var fs = require("fs");
+const path = require("path");
+const expfile = require("express-fileupload");
+
 const fs = require("fs");
 const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+app.use(expfile({ useTempFiles: true }));
+const cloudinary = require("cloudinary").v2
+
 
 // Define middleware here.
 app.use(express.urlencoded({ extended: true }));
@@ -15,14 +24,13 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
 
-app.get('*',(req, res) => {
-	res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
-}
+
 // Add routes, both API and view
 app.use(routes);
-// app.use(require("./routes/index.js"));
 
+app.get('*',(req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
 // Start the API server
 db.sequelize.sync().then(function(){
 	app.listen(PORT, function () {

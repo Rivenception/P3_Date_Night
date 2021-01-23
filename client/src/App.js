@@ -33,12 +33,12 @@ function App() {
     console.log(dates)
 
   return (
+      <Router>
     <div className="App">
     <Wrapper/>
 	  <Sidebar/>
 	  <Main/>
       <Nav />
-      <Router>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -76,9 +76,9 @@ function App() {
             <Gallery />
           </Route>
         </Switch>
-      </Router>
       <Foot />
     </div>
+      </Router>
   );
 }
 

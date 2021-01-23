@@ -2,19 +2,21 @@ import React from "react";
 import "./style.css"
 import Carousel from 'react-bootstrap/Carousel'
 import image from "../../assets/images/Stargazing.jpg"
-import image2 from "../../assets/images/Hiking.jpg"
+// import image2 from "../../assets/images/Hiking.jpg"
 import image3 from "../../assets/images/Ski Trip.jpg"
 import image4 from "../../assets/images/Beach.jpg"
+// import { PromiseProvider } from "mongoose";
 
 
 
-function Carousels() {
+function Carousels(props) {
     return (
+        <div className="container">
         <Carousel>
             <Carousel.Item>
                 <img
                     className=" d-block w-100"
-                    src={image2}
+                    src={props.newImage ? props.newImage.image : image}
                     alt="First slide"
                 />
                 <Carousel.Caption>
@@ -57,7 +59,7 @@ function Carousels() {
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
-       
+       </div>
     )
 }
 

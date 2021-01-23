@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import {Link} from "react-router-dom";
 
 function NavSidebar() {
 
@@ -9,9 +10,9 @@ function NavSidebar() {
         <a href="/" className="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Home
         </a>
-        <a href="/planner" className="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
+        <Link to="/planner" className="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Planner
-        </a>
+        </Link>
         <a href="/blog" className="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Adventures
         </a>

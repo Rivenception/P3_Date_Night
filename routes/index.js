@@ -11,6 +11,10 @@ const Dates = require("../models/dates.js");
 //   res.sendFile(path.join(__dirname, "index.html"));
 // });
 
+// app.get('*',(req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
+
 router.get("/api/randomdate", async (req, res) => {
   const dates = await db.Date.findAll();
 
@@ -52,5 +56,16 @@ router.get("/api/users", (req, res) => {
       res.status(404).json(err);
     });
 });
+
+  // DELETE route for deleting recipes where the id is equal to req.params.id,
+  // app.delete("/api/blog/:id", function(req, res) {
+  //   db.Blog.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(result) {
+  //     res.json(result);
+  //   });
+  // });
 
 module.exports = router;
