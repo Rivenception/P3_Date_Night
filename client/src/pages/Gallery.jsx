@@ -28,30 +28,33 @@ function Gallery() {
     setPost(!post)
   }
   return (
-    <div>
+    <div className="gallery">
       <br />
-      <h2 className="gallery">Gallery</h2>
-      <br></br>
-      {newImages.length ? (
-        <div className="container">
-          <Carousel>
-        {newImages.map(element => {
-          return (        
-                <Carousel.Item>
-                <img
-                    className=" d-block w-100"
-                    src={element}
-                    alt="First slide"
-                />
+      <h2 className="fancy">Gallery</h2>
+        <br></br>
+
+        {/* <div className="gallery"> */}
+        {newImages.length ? (
+          <div className="container">
+            <Carousel>
+            {newImages.map(element => {
+              return (        
+                  <Carousel.Item>
+                  <img
+                      className=" d-block w-100"
+                      src={element}
+                      alt="First slide"
+                  />
                 {/* <Carousel.Caption>
                     <h3>Hiking Expedition</h3>
                     <p>Create new memories in the great outdoors.</p>
                 </Carousel.Caption>  */}
-            </Carousel.Item>
-          )
-        })}
+              </Carousel.Item>
+            )
+          })}
           </Carousel>
         </div>
+        
         ) : (
           <Carousels />
         )}
@@ -60,6 +63,8 @@ function Gallery() {
       <input type="file" className="form-control-file" id="postNewImage" onChange= {handleNewImage} />
       <button type="submit" className="btn btn-danger mb-2" onClick={handleClick}>Post</button>
     </div>
+
+    // </div>
   );
 }
 export default Gallery;
