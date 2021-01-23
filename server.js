@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
-app.use(require("./routes/index.js"));
+// app.use(require("./routes/index.js"));
 
 // Start the API server
 app.listen(PORT, function () {

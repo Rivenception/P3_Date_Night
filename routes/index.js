@@ -4,7 +4,7 @@ const router = require("express").Router();
 const Dates = require("../models/dates.js");
 
 // API Routes
-router.use("/api", apiRoutes);
+// router.use("/api", apiRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
