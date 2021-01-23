@@ -7,9 +7,9 @@ const Dates = require("../models/dates.js");
 // router.use("/api", apiRoutes);
 
 // If no API routes are hit, send the React app
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+// router.use(function(req, res) {
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
 
 router.get("/api/randomdate", async (req, res) => {
   const dates = await db.Date.findAll();
