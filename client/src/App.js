@@ -53,11 +53,10 @@ function App() {
             <Blog />
           </Route>
           <Route exact path="/preferences">
-            <Preferences />
+            <Preferences/>
           </Route>
           <Route exact path="/planner">
             <Planner>
-              <Row>
               {dates.map(datelist => (
                 <Datecard
                   key = {datelist.id}
@@ -69,10 +68,8 @@ function App() {
                   budget = {datelist.budget}
                   items = {datelist.items}
                   links = {datelist.links}
-
                 />
               ))}
-              </Row>
             </Planner>
           </Route>
           <Route exact path="/gallery">

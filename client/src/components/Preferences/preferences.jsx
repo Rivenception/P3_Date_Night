@@ -5,7 +5,7 @@ import Budget from "./budget";
 
 function Settings() {
   return (
-    <div className="offset-md-3 col-lg-6 pb-5">
+    <div className="col-lg-6 pb-5">
       <form className="row">
         <div className="col-md-6">
           <div className="form-group">
