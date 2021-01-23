@@ -11,6 +11,10 @@ const Dates = require("../models/dates.js");
 //   res.sendFile(path.join(__dirname, "index.html"));
 // });
 
+// app.get('*',(req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
+
 router.get("/api/randomdate", async (req, res) => {
   const dates = await db.Date.findAll();
 
