@@ -5,3 +5,7 @@
 label {
     color: whitesmoke;
 }
+
+.row {
+    margin: auto;
+}
