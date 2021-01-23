@@ -1,3 +1,5 @@
+import "./style.css"
+
 function Planner({ children }) {
   return (
     <div>

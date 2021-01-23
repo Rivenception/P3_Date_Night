@@ -1,9 +1,19 @@
 .container {
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
-    padding: 7% 0% 0% 1%;
+    padding: 1% 0% 1% 0%;
 }
 
-.card-deck {
-    display: flex;
+.card {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.card-img-top {
+    overflow: auto;
+    height: 35vh;
+    width: 100%;
+    object-fit: cover;
 }
