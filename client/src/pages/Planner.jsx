@@ -3,7 +3,7 @@ function Planner({ children }) {
     <div>
       <br />
       <h2 className="fancy">Planner</h2>
-      { children }
+      <div className="row">{children}</div>
     </div>
   );
 }

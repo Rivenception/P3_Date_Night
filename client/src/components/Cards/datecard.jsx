@@ -7,27 +7,25 @@ function Datecard(props) {
   const budgetCheck = [];
 
   if (props.location === "Home") {
-    console.log(props.location);
     locationCheck.push(<FontAwesomeIcon icon={faHome} key={props.id}/>);
   } else if (props.location === "Outdoors") {
     locationCheck.push(<FontAwesomeIcon icon={faCloudSun} key={props.id}/>);
   }
 
   if (props.budget === "Low") {
-    console.log(props.location);
     budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id}/>);
   } else if (props.budget === "Medium") {
     budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id}/>);
-    budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id}/>);
+    budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id + "second"}/>);
   } else if (props.budget === "High") {
     budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id}/>);
-    budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id}/>);
-    budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id}/>);
+    budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id + "second"}/>);
+    budgetCheck.push(<FontAwesomeIcon icon={faTag} key={props.id + "third"}/>);
   }
 
   return (
     <div className="container col-md-12 col-lg-3">
-      <div className="card mx-auto" style={{ width: "18rem" }}>
+      <div className="card mx-auto">
         <img src={props.photo} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{props.date}</h5>
