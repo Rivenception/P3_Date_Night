@@ -12,7 +12,8 @@ function Home() {
 
   async function newCard() {
     const apiCall = await getDates();
-    const newDate = apiCall.data[0];
+    let newDate = apiCall.data[0];
+    if (cardState.id == newDate.id) newDate = apiCall.data[1];
     setCardState({...newDate, display: true})
   }
 
