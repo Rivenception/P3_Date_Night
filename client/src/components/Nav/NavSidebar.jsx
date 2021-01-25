@@ -10,9 +10,9 @@ function NavSidebar() {
         <a href="/" className="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Home
         </a>
-        <Link to="/planner" className="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
+        <a href="/planner" className="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Planner
-        </Link>
+        </a>
         <a href="/blog" className="list-group-item list-group-item-action bg-dark fancy" style={{color: "whitesmoke"}}>
           Adventures
         </a>
