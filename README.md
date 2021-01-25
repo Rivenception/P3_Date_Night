@@ -17,6 +17,9 @@ For this project, we are going to make a Date Night Applicaiton that helps coupl
 
 <img width="1439" alt="Screen Shot 2021-01-25 at 6 29 24 PM" src="https://user-images.githubusercontent.com/68867054/105779037-8f7d6100-5f3b-11eb-9014-b273c23d0ef1.png">
 
+<img width="857" alt="Screen Shot 2021-01-25 at 6 32 39 PM" src="https://user-images.githubusercontent.com/68867054/105779146-ba67b500-5f3b-11eb-8993-676210390767.png">
+
+
 # Links
 
 Github: https://github.com/Rivenception/P3_Date_Night
