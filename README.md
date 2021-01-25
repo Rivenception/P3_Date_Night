@@ -13,6 +13,9 @@ For this project, we are going to make a Date Night Applicaiton that helps coupl
 2. We want to give them opportunity to post about their dating adventures and post images online as well. 
 
 # Screenshots 
+<img width="1438" alt="Screen Shot 2021-01-25 at 6 28 57 PM" src="https://user-images.githubusercontent.com/68867054/105778987-783e7380-5f3b-11eb-9fa8-b1e7b8ee2f24.png">
+
+<img width="1439" alt="Screen Shot 2021-01-25 at 6 29 24 PM" src="https://user-images.githubusercontent.com/68867054/105779037-8f7d6100-5f3b-11eb-9014-b273c23d0ef1.png">
 
 # Links
 
