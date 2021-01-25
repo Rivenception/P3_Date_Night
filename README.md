@@ -1,9 +1,5 @@
 # Date Night 
 
-# Project Title
-
-Date Night 
-
 # Team Members 
 Rick Mingione, Eric Johnson, David Brown, Brian Garrity 
 
