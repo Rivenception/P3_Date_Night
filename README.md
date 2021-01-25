@@ -13,12 +13,13 @@ For this project, we are going to make a Date Night Applicaiton that helps coupl
 2. We want to give them opportunity to post about their dating adventures and post images online as well. 
 
 # Screenshots 
-<img width="1438" alt="Screen Shot 2021-01-25 at 6 28 57 PM" src="https://user-images.githubusercontent.com/68867054/105778987-783e7380-5f3b-11eb-9fa8-b1e7b8ee2f24.png">
+<img width="1439" alt="Screen Shot 2021-01-25 at 6 40 33 PM" src="https://user-images.githubusercontent.com/68867054/105779760-06672980-5f3d-11eb-8fc0-281a902c527b.png">
 
-<img width="1439" alt="Screen Shot 2021-01-25 at 6 29 24 PM" src="https://user-images.githubusercontent.com/68867054/105779037-8f7d6100-5f3b-11eb-9014-b273c23d0ef1.png">
+<img width="1440" alt="Screen Shot 2021-01-25 at 6 40 46 PM" src="https://user-images.githubusercontent.com/68867054/105779779-15e67280-5f3d-11eb-8751-28e27e7db6b3.png">
 
-<img width="857" alt="Screen Shot 2021-01-25 at 6 32 39 PM" src="https://user-images.githubusercontent.com/68867054/105779146-ba67b500-5f3b-11eb-8993-676210390767.png">
+<img width="1438" alt="Screen Shot 2021-01-25 at 6 40 57 PM" src="https://user-images.githubusercontent.com/68867054/105779848-344c6e00-5f3d-11eb-8ea8-a71fb01ea6f8.png">
 
+<img width="1437" alt="Screen Shot 2021-01-25 at 6 41 10 PM" src="https://user-images.githubusercontent.com/68867054/105779883-43cbb700-5f3d-11eb-8985-020c83ea5c7f.png">
 
 # Links
 
